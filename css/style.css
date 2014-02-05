@@ -1,0 +1,83 @@
+#top {
+	/*border-bottom: 1px solid #05D1FF;*/
+	margin-top: 50px;
+	background-color: #D3DBDE;
+	
+}
+
+#top .container  {
+	margin: 0 auto;
+	padding-top: 110px;
+	text-align: center;
+	height: 600px;
+	background: url(../img/originalsplah.png) no-repeat;
+	background-size: cover;
+
+}
+
+.pageContainer {
+	padding-top: 1%;
+	padding-bottom: 1%;
+	min-height: 600px;
+}
+
+
+/*#home, #works {
+	padding-top: 30px;
+}
+*/
+#home {
+	background: url(../img/brushed_@2X.png)
+}
+
+#works {
+	background: url(../img/sos.png)
+}
+
+#eye {
+	background: url(../img/pixel_weave_@2X.png)
+}
+
+#online {
+	background: url(../img/brushed_@2X.png);
+}
+
+#price {
+	background: url(../img/sos.png);
+}
+
+#news {
+	background: url(../img/pixel_weave_@2X.png);
+}
+
+#contact {
+	background: url(../img/brushed_@2X.png)
+}
+
+#online img {
+	margin-top: 20px;
+}
+.Bottomcaption {
+	font-size: 1.8em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.bigger {
+	font-size: 1.3em;
+}
+
+.centerItalic {
+	margin-top: 15px;
+	font-style: italic;
+	text-align: center;
+}
+
+.red {
+	color: #f05b5b;
+}
+
