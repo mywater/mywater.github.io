@@ -57,6 +57,10 @@
 #online img {
 	margin-top: 20px;
 }
+
+#price li {
+	margin-bottom: 15px;
+}
 .Bottomcaption {
 	font-size: 1.8em;
 	text-align: center;
