@@ -42,16 +42,20 @@
 	background: url(../img/brushed_@2X.png);
 }
 
-#price {
+#tracker {
 	background: url(../img/sos.png);
 }
 
-#news {
+#price {
 	background: url(../img/pixel_weave_@2X.png);
 }
 
-#contact {
+#news {
 	background: url(../img/brushed_@2X.png)
+}
+
+#contact {
+	background: url(../img/sos.png)
 }
 
 #online img {
