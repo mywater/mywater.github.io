@@ -35,7 +35,8 @@
 }
 
 #paperless {
-	background: url(../img/pixel_weave_@2X.png)
+	background: url(../img/pixel_weave_@2X.png);
+	min-height: 350px;
 }
 
 #enquires {
@@ -100,4 +101,8 @@
 
 small {
 	font-size: .7em;
+}
+
+.ital {
+	font-style: italic;
 }
