@@ -34,16 +34,21 @@
 	background: url(../img/sos.png)
 }
 
-#eye {
+#paperless {
 	background: url(../img/pixel_weave_@2X.png)
 }
 
-#online {
-	background: url(../img/brushed_@2X.png);
+#enquires {
+	background: url(../img/sos.png);
+	min-height: 450px;
+}
+
+#enquires img {
+	margin-right: 5px;
 }
 
 #tracker {
-	background: url(../img/sos.png);
+	
 }
 
 #price {
@@ -89,3 +94,10 @@
 	color: #f05b5b;
 }
 
+.big {
+	font-size: 1.4em;
+}
+
+small {
+	font-size: .7em;
+}
