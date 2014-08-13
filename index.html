@@ -1,235 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Water | Smart Water Meter Technology</title>
+	<meta charset="utf-8">
+	<title>My Water | Future Water Metering and Billing System</title>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+	<!-- Set Viewport Options -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <link rel="stylesheet" href="css/style.css" >
+	<!-- jquery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
-    <body data-spy="scroll" data-target=".navbar-main">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand" href="#" style="color: #333; font-weight:bold;">AMR</a> -->
-          </div><!-- end navbar-header -->
-          <div class="collapse navbar-collapse navbar-main" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="#home">Overview</a></li>
-              <li><a href="#worksheading">How it Works?</a></li>
-              <li><a href="#paperless">Paperless Billing</a></li>
-              <li><a href="#enquires">Inquires</a></li>
-              <li><a href="#newsheading">News Blog</a></li>  
-              <li><a href="#contactheading">Contact us</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-      <!-- ##################overview/home####################### -->
-      <div id="top" >
-        <div class="container">
-          <div><img src="img/mywaterlogo.png"></div>
-          <h1>AMR</h1>
-          <h2>Smart Technology</h2>
-          <h3>Smart Phones - Smart Water Meters &amp; Smart Banking</h3>
-        </div>
-      </div>
-      <div id="home" class="pageContainer">
-        <div class="container">
-          <div class="row">
-            <!-- Left column -->
-            <div class="col-md-8">
-              <img id="monitorphone" src="img/iphonemonitor.png" class="img-responsive" alt="Responsive image">
-              <p>My Water cutting edge technology simultaneously shares automatic water meter reading with both Municipalities and Consumers.
-              Speed of access to information, transparency and two way communications being the Cornerstone and Key Drivers. 
-              </p>
-              <p>
-                <span class="underline">Mission:</span><br/>
-                Improve Municipal billing efficiencies, while consumers save water and money without reducing the municipalities current income stream and the need for  Government to increase the price of Water. To introduce new technologies with limited disruption to Consumers, Municipal Officials and to not further burden the Poor.
-              </p>
-              <p>
-                <span class="Bottomcaption">"Pay if it Flows"</span> Smart Meters <br />
-                <span class="red big">Free</span> Installation for participating Municipalities, or <br />
-                <span class="red">R80.00</span>/month Private Rental. <small>T&amp;C's Apply </small>
-              </p>
-              <div class="alert alert-info">To see your Municipality participate in the initiative 
-                    SMS <span class="ital">Municipality Name</span> (only) to <span class="red big"> 44934</span><br />
-                    <small>SMS charged at R0.50. Bundled SMS's do not apply</small>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <a class="twitter-timeline" href="https://twitter.com/mywaterSA" data-widget-id="429985876827840513">Tweets by @mywaterSA</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div><!-- end col 4 -->
-          </div><!-- end row -->
-          
-        </div><!-- container -->
-      </div><!-- end home -->
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-      <!-- ################## HOW IT WORKS ####################### -->
-      <div id="works" class="pageContainer">
-        <div class="container">
-          <div class="page-header">
-            <h1 id="worksheading">How it Works?</h1>
-          </div><!-- end page header -->
-          <div class="row">
-            <div class="col-md-12">
-              <h3>AMR (Automatic Meter Reading) with Web based Data Storage</h3>
-              <ul>
-                <li>Wireless communication from Meter to Monitor – GSM from Monitor to Web Base to Cell Phone to Call Centre.</li>
-                <li>Two Meter system – Measure to Pay &amp; Measure to Audit</li>
-              </ul>
-              <div class="centerpic"><img id="monitorphone" src="img/house.png" class="img-responsive" alt="Responsive image"></div>
-            </div>
-          </div>
-        </div><!-- end container -->
-      </div><!-- end how it works -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<!-- end boot Strap -->
 
-      <!--  ##################################################### Paperless ########################################################## -->
-       <div id="paperless" class="pageContainer">
-        <div class="container">
-           <div class="page-header">
-            <h1 id="newsheading">Paperless Billing</h1>
-          </div><!-- end page header -->
-          <div class="row">
-            <div class="col-md-12">
-              <img id="monitorphone" src="img/paperless.png" class="img-responsive" alt="Responsive paperless">
-            </div><!-- end col-md-12 -->
-          </div><!-- end row -->
-        </div><!-- end container -->
-      </div><!-- end paperless -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-      <!--  ##################################################### Inquires ########################################################## -->
-      <div id="enquires" class="pageContainer">
-        <div class="container">
-           <div class="page-header">
-            <h1 id="newsheading">Inquires</h1>
-          </div><!-- end page header -->
-          <div class="row">
-            <div class="col-md-12">
-              <p><img src="img/calllady.png"><span class="red big">Call in</span> 0861 <em>mywater</em> or 082 400 4543</p>
-            <p><img src="img/textlady.png"><span class="red big">"Please Call me" </span> SMS <span class="gray">Your Name &amp; Municipality</span> to <span class="red">45227</span><br />
-             <small>SMS charged at R1.00. Bundled SMS's do not apply</small> 
-            </p>
-            </div><!-- end col-md-12 -->
-          </div><!-- end row -->
-        </div><!-- end container -->
-      </div><!-- end enquires -->
+	<style type="text/css">
 
-      <!--  ##################################################### NEWS ########################################################## -->
-      <div id="news" class="pageContainer">
-       <div class="container">
-         <div class="page-header">
-          <h1 id="newsheading">News</h1>
-        </div><!-- end page header -->
-        <div class="row">
-          <div class="col-md-12">
-          </div><!-- end col-12 -->
-        </div><!-- end row -->
-        <div class="row">
-          <div class="col-md-3">
-            <img src="img/looklocal.png">
-            <h4>The water wise wonder </h4> <p>MICHAEL FERGUSON, 07 JUNE 2012</p>
-            <p>Benoni businessmen Demi Toontas and Larry Symington have come up with an invention that will forever change the way human beings consume water.</p>
-            <p><a href="http://www.looklocal.co.za/looklocal/content/en/benoni/benoni-news-general?oid=5690549&sn=Detail&pid=210&The-water-wise-wonder">
-              Read more ...</a></p>
-            </a>
-          </div><!-- end md-4 -->   
-          <div class="col-md-3">
-            <img src="img/mybroadband-logo.png" width="30%">
-            <h4>Call for entrepreneurs to develop intelligent water management solutions </h4> <p>8 NOVEMBER 2013</p>
-            <p>Wasting water in a country that's as dry as South Africa is almost a sin, and a very expensive one at that. But while there's growing awareness around the need to protect and conserve the country's water resources, at consumer level, millions of litres are lost every year, as well as millions of rands.</p>
-            <p><a href="http://companies.mybroadband.co.za/blog/2013/11/08/call-for-entrepreneurs-to-develop-intelligent-water-management-solutions/"> Read more ...</a></p>
-          </div><!-- end md-4 --> 
-          <div class="col-md-3">
-            <img src="img/itweb.png">
-            <h4>The water meter reinvented</h4>
-            <p>For Larry Symington, CEO of specialist manufacturer and ICT company, MyWater, no one should be spending this much on water. He suggests the best way to reduce this spend is through communication.</p>
-            <p><a href="http://www.itweb.co.za/index.php?option=com_content&view=article&id=68822:The-water-meter-reinvented&catid=129">Read more...</a></p>
-          </div><!-- end md-4 --> 
-          <div class="col-md-3">
-            <img src="img/infanews.png" width="80%">
-            <h4>R18 million Mukula Water Supply Project handed over </h4> <p>06 MARCH 2013</p>
-            <p><a href="http://www.infrastructurene.ws/2013/03/06/r18-million-mukula-water-supply-project-handed-over/">Read More ...</a></p>
-          </div>
-        </div><!-- end row -->
+		body {
+			/*background-image: url(img/bkg.jpg);
+			background-repeat: no-repeat; 
+			background-attachment:fixed;*/
+			
+		}
 
-        <div class="row">
-          <div class="col-md-3">
-            <img src="img/bdlive.png">
-            <h4>SA firms growing more aware of water's strategic value </h4> <p>BY SUE BLAINE, 30 APRIL 2013</p>
-            <p><a href="http://www.bdlive.co.za/national/science/2013/04/30/sa-firms-growing-more-aware-of-waters-strategic-value">Read More ...</a></p>
-          </div>
-          <div class="col-md-3">
-            <img src="img/bdlive.png">
-            <h4>South Africa's businesses urged to manage water usage</h4> <p>BY ALF JAMES, APRIL 19 2013</p>
-            <p><a href="http://www.bdlive.co.za/business/2013/04/19/south-africas-businesses-urged-to-manage-water-usage">Read More ...</a></p>
-          </div>
-          <div class="col-md-3">
-            <img src="img/bdlive.png">
-            <h4>SA business must start taking water efficiency seriously, says Waterwise MD</h4><p>BY SUE BLAINE, 22 MARCH 2013</p>
-            <p><a href="http://www.bdlive.co.za/national/science/2013/04/30/sa-firms-growing-more-aware-of-waters-strategic-value">Read More ...</a>
-            </p>
-          </div>
-          <div class="col-md-3">
-            <img src="img/ew.gif">
-            <h4>Water: The poor pay the highest price</h4><p>BY ALEX ELISEEV, 6 FEB 2014</p>
-            <p><a src="http://ewn.mobi/news/Local/water-the-poor-pay-the-highest-price/26846?location=set">Read More ...</a></p>
-          </div>
+		#clear {
+			clear: both;
+		}
 
-        </div><!-- end row -->
-      </div><!-- end contianer -->
-    </div><!-- end news -->
+		header {
+			margin: 0 auto;
+		}
 
-    <!--  ###################################### Contact ################################# -->
-    <div id="contact" class="pageContainer">
-      <div class="container">
-        <div class="container">
-       <!-- <div class="page-header">
-            <h1 id="contactheading">Contact</h1>
-          </div><!-- end page header --> 
-          <div class="row">
-            <div class="col-md-12">
-              <img id="contactheading" src="img/contactheader.png" class="img-responsive" alt="Responsive image">
-              <ul>
-                <li>For Business &amp; Sales:  Demi Toontas      Cell 071 630 2680 toontasd@gmail.com</li>
-                <li>Technical: Larry Symington Cell 083 427 1972 larry@mywater.co.za</li>
-                <li>IT:  Dean - Cell 074 188 4555 dean@mywater.co.za</li>
-                <li>PR & Media Karen Heydenrych Cell 083 302 9494  karen@communikay.co.za</li>
-              </ul>
-            </div><!-- end col-md-12 -->
-          </div><!-- end row -->
-        </div><!-- end conainer -->
-      </div><!-- end contact -->
-    </div>
-    <div id="footer">
-      <p style="text-align:center; line-height: 20px;">&copy; 2014 My Water Home Management cc </p>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		header #image {
+			display: inline-block;
+			/*margin: 0 auto;*/
+		}
+		header #text {
+			display: inline-block;
+			text-align: center;
+		}
 
-    <!-- GOOGLE ANALYTICS -->
+		header #text h1 {
+			font-size: 28px;
+		}
+
+		header #text h2 {
+			font-size: 20px;
+		}
+
+		/*.navbar-nav .cntr {
+			width: 100%;
+			text-align: center;
+		}
+		.navbar-nav > li {
+			float: none;
+			display: inline-block;
+		}*/
+
+		#works, #price, #news, #contact {
+			border-top: 1px solid #eee;
+		}
+
+		#home {
+			text-align: center;	
+		}
+
+
+		#home h3 {
+			margin: 40px auto;
+		}
+
+		#works h4{
+			text-align: center;
+		}
+
+		#price .center {
+			display: block;
+			margin: 50px auto;
+		}
+
+		#price h3 {
+			text-align: center;
+		}
+
+		footer {
+			text-align: center;
+			font-size: 10px;
+		}
+
+		/*Media Queries*/
+		/* Smartphones (portrait and landscape) ----------- */
+		
+
+		/* Smartphones (landscape) ----------- */
+		@media only screen 
+		and (max-width : 1024px) {
+			/* Styles */
+			header #image {
+				display: block;
+				width:120px;
+				margin: 0 auto;
+			}
+			header #text {
+				display: block;
+				text-align: center;
+			}
+
+			header #text h1 {
+				font-size: 20px;
+			}
+
+			header #text h2 {
+				font-size: 18px;
+			}
+			
+			
+		}
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="image"><img src="img/mywaterlogo.png" alt="mywaterlogo" class="img-responsive"></div>
+			<div id="text">
+				<h1>
+					Future water metering &amp; Billing System <br />
+					in partership with rate payers, communities & Corporate SA.
+				</h1>
+				<h2>
+					Smart Phones - Smart Water Meters &amp; Smart Banking
+				</h2>
+			</div>	
+			<div id="clear"></div>
+		</header>
+	</div>
+	<div class="nav">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse cntr" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#works">How it Works?</a></li>
+						<!-- <li><a href="#onlinepayment">Online Payment</a></li> -->
+						<li><a href="#price">Price/terms</a></li>
+						<li><a href="#news">News</a></li>
+						<li><a href="#contact">Contact us</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="https://fb.facebook.com/mywatersa"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+						<li><a href="https://twitter.com/mywaterSA"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+					</ul>
+				</div>
+			</div>	
+		</nav>
+	</div>
+	<div id="home">
+		<div class="container">
+			<div class="row">
+			<!-- <div class="col-md-4">
+				<img src="img/monintor3d.png" alt="monitor image" class="img-responsive">
+				<p>Real Time Metering</p>
+			</div><!-- end col-md-6 -->
+			<!-- <div class="col-md-4">
+				<img src="img/cellphonerightangle.png" alt="Cell phone right angled" class="img-responsive">
+				<p>Paperless Billing</p>
+			</div><!-- end col-md-6 --> 
+			<div class="col-md-8">
+				<img src="img/topImage.png" class="img-responsive">
+			</div>
+			<div class="col-md-4"><a class="twitter-timeline" href="https://twitter.com/mywaterSA" data-widget-id="429985876827840513">Tweets by @mywaterSA</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+			</div><!-- end row -->
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Be empowered, Be Proactive, Be part of SA's most important Public/Private/Partnership</h3>
+				</div><!-- end col-md-12-->
+			</div><!-- end row -->
+		</div><!-- end container home -->
+	</div><!-- end home -->
+	<div id="works" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+					<h2>AMR (Automatic Meter Reading) with Web Based Data Storage</h2>
+				</div>
+				<ul>
+					<li>
+						Wireless communication from Meter to Monitor - GSM from Monitor to Web Base to Cell Phone to Call Center.
+					</li>
+					<li>
+						Two Meter system - Measure to Pay &amp; Measure to Audit
+					</li>
+				</ul>
+				<img src="img/house.png" alt="how it works drawing" class="img-responsive">
+				<h4>Manufactured in Durban, South Africa.</h4>
+			</div><!-- end col-md-12 -->
+		</div><!-- end row -->
+	</div><!-- end container works -->
+	<div id="onlinepayment" class="container"></div>
+	<div id="price" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+					<h2>My Water Pay-as-it-flows Contract</h2>
+				</div>
+				<p>Pay R80.00/month and recieve R80.00 Water Credits then Top Up for more. 
+					<small>(Free litres only available with participating municipalities)</small> Or Pay R80.00/month for peace of mind. <br />
+					36 Months contract - T&amp;C's apply.
+				</p>
+				<img src="img/graph.png" alt="graph" class="img-responsive center" />
+				<h3>Self manage <br />Detect leaks early<br /> Budget with no surprises</h3>
+			</div><!-- end col-md-12 -->
+		</div><!-- end row -->
+	</div><!-- end container price -->
+	<div id="news" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+					<h2>News <small>My Water In the Press</small></h2>
+				</div>
+			</div>
+		</div><!-- end row -->
+		<div class="row">
+			<div class="col-md-3"><!-- article 1 -->
+				<h4>SA invention to plug water wastage</h4>
+				<img src="img/logos/techCentral.png" alt="techCentral Logo" class="img-responsive"/>
+				<p>Published: 19 June 2014</p>
+				<p><a href="pdf/TechCentral_SAInvention.pdf">Read More...</a></p>
+			</div><!-- end col-md-3 article 1-->
+			<div class="col-md-3"><!-- article 2 -->
+				<h4>New water billing system needed</h4>
+				<img src="img/logos/envafr.png" class="img-responsive" />
+				<p>Published: 19 June 2014</p>
+				<p><a href="pdf/africanenv.pdf">Read More...</a></p>
+			</div><!-- end col-md-3 article 2-->
+			<div class="col-md-3"><!-- article 3 -->
+				<h4>LETTER: Change water billing</h4>
+				<img src="img/logos/bdlive.png"  class="img-responsive"/>
+				<p>Published: 30 May 2014</p>
+				<p><a href="pdf/dblive change water billing.pdf">Read More...</a></p>
+			</div><!-- end col-md-3 article 3-->
+			<div class="col-md-3"><!-- article 4 -->
+				<h4>My Water goes mobile</h4>
+				<img src="img/logos/itweb.png" alt="itweb logo" class="img-responsive" />
+				<p>Published: 22 May 2014</p>
+				<p><a href="pdf/itweb mywater goes moble.pdf">Read More...</a></p>
+			</div><!-- end col-md-3 article 4-->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="col-md-3"><!-- article 1 -->
+				<h4>Cell phone technologies to tackle SA water woes</h4>
+				<img src="img/logos/engnews.png" alt="Engineering News Logo" class="img-responsive">
+				<p>Published:5 May 2014</p>
+				<p><a href="pdf/engineering news cell phone tackel water.pdf">Read More...</a></p>
+			</div><!-- end col-md 3 article 1 -->
+			<div class="col-md-3"><!-- article 2 -->
+				<h4>LETTER: Outdated water model</h4>
+				<img src="img/logos/bdlive.png" alt="bdlive logo" class="img-responsive">
+				<p>Published: 11 November 2014</p>
+				<p><a href="pdf/dblive LETTER Outdated water model.pdf">Read More...</a></p>
+			</div><!-- end col-md 3 article 2 -->
+			<div class="col-md-3"><!-- article 3 -->
+				<h4>Call for entrepreneurs to develop intelligent water management solutions</h4>
+				<img src="img/logos/mybroadband-logo.png" class="img-responsive">
+				<p>Published: 8 November 2013</p>
+				<p><a href="pdf/mybb Call for entrepreneurs to develop intelligent water management solutions.pdf">Read More...</a></p>
+			</div><!-- end col-md 3 article 3 -->
+			<div class="col-md-3"><!-- article 4 -->
+				<h4>The Water meter reinvented</h4>
+				<img src="img/logos/itweb.png" class="img-responsive">
+				<p>Published: 7 November 2014</p>
+				<p><a href="pdf/itweb the water meter reinvented.pdf">Read More...</a></p>
+			</div><!-- end col-md 3article 4 -->
+		</div><!-- end row -->
+	</div><!-- end contianer news -->
+	<div id="contact" class="container">
+		<div class="page-header">
+			<h2>Contact Us</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<ul>
+					<li>For Business &amp; Sales: Demi Toontas Cell 071 630 2680 toontasd@gmail.com</li>
+					<li>Technical: Larry Symington Cell 083 427 1972 larry@mywater.co.za</li>
+					<li>PR &amp; Media Karen Heydenrych Cell 083 302 9494 karen@communikay.co.za</li>
+					<li>Website: Dean - webmaster@mywater.co.za
+					</ul>
+				</div>	
+			</div>
+		</div><!-- end container contact us -->
+		<footer class="container">
+			<p>Copyright &copy; 2014 My Water Home Managemnt cc.
+			</footer>
+		</body>
+
+		<!-- GOOGLE ANALYTICS -->
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -241,6 +329,4 @@
       ga('send', 'pageview');
 
     </script>
-
-  </body>
-  </html>
+		</html>
