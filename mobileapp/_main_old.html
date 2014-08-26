@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta charset="UTF-8">
+  <title>Customer Portal</title>
+  <link rel="stylesheet" href="chui.ios-3.0.4.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <style type="text/css">
+  
+  input {
+    font-size: 16px;
+    text-align: center;
+    width: 80px;
+    margin: 15px 5px;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  input:first-child {
+    margin-top: 20px;
+  }
+
+  li:first-child {
+    padding-bottom: 50px;
+  }
+
+  .copy p {
+    text-align: center;
+    font-size: 9px;
+  }
+
+  .twoline {
+    margin-right: 30px;
+  }
+
+  h1 {
+    margin: 0;
+    padding:0;
+  }
+  </style>
+</head>
+<body ng-controller="controler">
+  
+  <nav class="current">
+    <h1><img src="mywaterlogo.png" width="80px"></h1>
+  </nav>
+  <article class="current" id="Home">
+    <section>
+      <ul class="list">
+        <li style="text-align:center">
+          <input type="text" value="CA3445"/> <br />
+          <input type="text" value="{{timeHours%24}}:02"/> <small>Real Time</small> <br />
+          <input class="twoline" type="text" value="{{litres}}"/> 
+          <input type="text" value="R {{rand}}"/> <br />
+          <button ng-click="count = counter()" ng-init="count=initmonth" >{{data[count%data.length].month}}</button><br />
+    <input class="twoline" type="text"  value="{{data[count%data.length].litres}}" />
+    <input type="text" value="{{data[count%data.length].rands}}" />
+      <a href="http://mywater.co.za" style="text-align: center; color: #ccc; display:block">Vist mywater.co.za</a>
+        </li>
+        <li class="copy"><p>&copy; 2013 mywater<p></li>
+      </ul>
+    </section>
+  </article>
+
+  <script>
+  function controler($scope, $timeout) {
+    var counter = 1
+    var rdata = [
+                {hour:6,litres:13520,rand:8.65},
+                {hour:12,litres:13590,rand:-9.24},
+                {hour:18,litres:13991,rand:387.76}];
+
+    $scope.timeHours = rdata[0].litres
+    $scope.litres = rdata[0].litres;
+    $scope.rand = rdata[0].rand;
+
+    $scope.onTimeout = function(){
+        $scope.timeHours = rdata[counter%rdata.length].hour;
+        $scope.litres = rdata[counter%rdata.length].litres;
+        $scope.rand = rdata[counter%rdata.length].rand;
+        
+        mytimeout = $timeout($scope.onTimeout,3000);
+        counter++;
+    }
+    var mytimeout = $timeout($scope.onTimeout,3000);
+
+    // past months
+    $scope.data = [
+                            {month:"January", litres:'14872', rands:'223.08'},
+                             {month:"Febuary", litres:'11086', rands:'166.29'},
+                             {month:"March", litres:'13303', rands:'199.54'},
+                             {month:"April", litres:'14872', rands:'223.08'},
+                             {month:"May", litres:'11086', rands:'166.29'},
+                             {month:"June", litres:'13303', rands:'199.54'},
+                             {month:"July", litres:'14872', rands:'223.08'},
+                             {month:"August", litres:'11086', rands:'166.29'},
+                             {month:"September", litres:'13303', rands:'199.54'},
+                             {month:"October", litres:'14872', rands:'223.08'},
+                             {month:"November", litres:'11086', rands:'166.29'},
+                             {month:"December", litres:'12098', rands:'199.54'}
+                          ];
+     var date = new Date();
+     var count= date.getMonth()-1;
+
+     $scope.initmonth = count;
+     $scope.counter = function () {
+      if (count == 0) count = 12;
+      return count = count - 1;
+     }
+    }
+
+
+  </script>
+
+
+</body>
+</html>
