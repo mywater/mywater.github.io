@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta charset="UTF-8">
+  <title>Mobile Utitly App</title>
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  
+  <style type="text/css">
+
+   body {
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .container {
+    max-width: 320px;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+
+    height: 30px;
+
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    color: white;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 3px 0;
+
+    text-align: center;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  table {
+    width: 500px;
+  }
+
+  th {  
+    text-align: right;
+    vertical-align: middle !important;
+    padding-top: 5px; 
+  }
+
+  td span {
+    vertical-align: middle !important;
+  }
+
+  input, select{
+    text-align: center;
+    width: 110px;
+    float: right;
+  }
+
+  .fxl {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .modal-body {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+    color: white;
+  }
+
+  footer p{
+    font-size: 10px;
+    margin-top: 3px;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body ng-controller="controler">
+  <header>
+    <h1>Mobile Utility App</h1>
+  </header>
+  <div class="container" id="Home">
+    <div id="logo" class="col-md-12"><img src="img/mywaterlogo.png" width="150px"></div>  <!-- mywater Logo -->
+
+    <table class="table table-striped">
+      <tr>
+        <th>SERIAL NUMBER:</th>
+        <td><input type="text" value="065 774 3415"/></td>
+      </tr>
+
+      <tr>
+        <th>FIXED LEVY:</th>
+        <td><span>R</span><input type="text" ng-change="change()" ng-model="levy" placeholder="0.00"/></td>
+      </tr>
+
+      <tr>  <td colspan="2" class="fxl" style="text-align: center;">USER PAY</td></tr>
+
+      <tr>  
+        <th><span class="waterLabel">WATER:</span></th>
+        <td>
+          <select id="waterinput" ng-change="change()" ng-model="water">
+            <option value="10">R10</option>
+            <option value="20">R20</option>
+            <option value="50">R50</option>
+            <option value="100">R100</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th>TOTAL:</th>
+        <td><span>R</span><input readonly type="text" value="{{total}}"/></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" style="text-align: center;"><button type="button" class="btn btn-success btn-sm" ng-click="submitButton()">Submit</button></td>
+      </tr>
+
+      <tr>
+        <th>REFERENCE:</th>
+        <td>&nbsp;&nbsp;  <input type="text" value="{{reference}}" style="color:red;"/></td>
+      </tr>
+
+    </table> 
+  </div>
+  <footer><p>&copy; 2014 My Water Home Management Systems cc</p></footer>
+
+  <!-- modals -->
+
+  <div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Monitor Update</h4>
+        </div>
+        <div class="modal-body">
+          Your Monitor has been credited with <br /> R{{waterVal}}.00. <br />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="movingon();">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="errorModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Error:</h4>
+        </div>
+        <div class="modal-body">
+         <h5>Please Select A Value for the WATER field.</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- controllers -->
+  <script>
+    function controler($scope, $timeout, $location) {
+
+      // total
+      $scope.change = function() {
+        var levy = parseFloat($scope.levy);
+        var water = parseFloat($scope.water);
+        if (isNaN(levy)) levy = 0;
+        if (isNaN(water)) water = 0;
+        
+        var total = (levy + water).toFixed(2);
+
+        $scope.total = total;
+
+        $scope.waterVal = water;
+
+        // switch(water) {
+        //   case 100: $scope.image = "img/r100.png"; break;
+        //   case 50: $scope.image = "img/r50.png"; break;
+        //   case 20: $scope.image = "img/r20.png"; break;
+        //   default: $scope.image = "img/r10.png"; break;
+        // }
+      }
+
+      // reference number
+      $scope.submitButton = function() {
+
+        if ($scope.water) {
+          $timeout(function() {
+            $scope.reference = "3412334123422134";
+          }, 2000);
+
+          $timeout(function() {
+            $('#myModal').modal('show'); 
+            $scope.water = null;
+            $scope.levy = null;
+            $scope.total = null;
+            $scope.reference = null;
+          }, 3500);
+
+        } else {
+          $('#errorModal').modal('show');
+
+        }     
+      }
+    }
+
+    function movingon() {
+      location.href="CJamesGoodstanding.pdf";
+    }
+
+  </script>
+
+
+</body>
+</html>
